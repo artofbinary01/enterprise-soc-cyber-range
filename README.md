@@ -54,7 +54,7 @@ flowchart TB
     NIC0 <--> VMBR0
     VMBR0 <--> WAN
     LAN <--> VMBR1
-    Target -.->|Encrypted Logs (UDP 1514)| Wazuh
+    Target -.->|"Encrypted Logs (UDP 1514)"| Wazuh
 ```
 
 ---
