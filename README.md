@@ -225,7 +225,6 @@ Below is a record of hardware, networking, and Linux configuration issues I reso
 1. **Always Verify Firewall Assumptions with Live Traffic Tests**: Assuming a subnet is isolated just because it sits behind a firewall is dangerous. Running simple `ping` tests from `Audit-Target-01` before executing any attacks exposed OPNsense's default-allow LAN rule early and prevented lab traffic from touching the primary network.
 2. **Privileged LXC vs. Dedicated KVM Virtual Machine for the SIEM**: Running Wazuh and OpenSearch inside a Privileged LXC container saved significant RAM overhead compared to a full VM, but privileged containers share the host kernel with reduced namespace isolation. In a production environment with greater hardware capacity, I would deploy the SIEM stack inside an isolated KVM Virtual Machine (or dedicated hardware) and place it on a dedicated Management/Security VLAN rather than the main LAN bridge.
 3. **Minimal OS Templates Require Explicit Logging Audits**: Deploying lean container templates reduces attack surface, but often strips out standard utilities (`rsyslog`, `gnupg`, `curl`). Verifying that required log files actually exist on disk should always be step one before troubleshooting SIEM decoders.
-4. **Future Lab Roadmap**: Next steps for this environment include deploying Linux `auditd` on the target node to capture kernel-level process execution (`execve`) and evaluating C2 beaconing detection across the OPNsense firewall boundary.
 
    ---
 
