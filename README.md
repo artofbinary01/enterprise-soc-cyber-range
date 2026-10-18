@@ -227,6 +227,13 @@ Below is a record of hardware, networking, and Linux configuration issues I reso
 3. **Minimal OS Templates Require Explicit Logging Audits**: Deploying lean container templates reduces attack surface, but often strips out standard utilities (`rsyslog`, `gnupg`, `curl`). Verifying that required log files actually exist on disk should always be step one before troubleshooting SIEM decoders.
 4. **Future Lab Roadmap**: Next steps for this environment include deploying Linux `auditd` on the target node to capture kernel-level process execution (`execve`) and evaluating C2 beaconing detection across the OPNsense firewall boundary.
 
+   ---
+
+## Project Roadmap & Future Expansions
+
+- [ ] ** Observability & Availability of Infrastructure **: Deploy Checkmk to monitor hardware health, container resource exhaustion, and SNMP across the OPNsense firewall to correlate the infrastructures failures with security alerts.
+- [ ] **Adversary Emulation & C2 Detection **: Stand up an isolated AdaptixC2 team server within (`vmbr1`) to simulate post-exploitation, testing in-memory beaconing detection and kernel process execution logging (`auditd` / `sysmon`).
+
 ---
 
 ## Contact
