@@ -230,8 +230,8 @@ Below is a record of hardware, networking, and Linux configuration issues I reso
 
 ## Project Roadmap & Future Expansions
 
- ** Observability & Availability of Infrastructure **: Deploy Checkmk to monitor hardware health, container resource exhaustion, and SNMP across the OPNsense firewall to correlate the infrastructures failures with security alerts.
- **Adversary Emulation & C2 Detection **: Stand up an isolated AdaptixC2 team server within (`vmbr1`) to simulate post-exploitation, testing in-memory beaconing detection and kernel process execution logging (`auditd` / `sysmon`).
+ **Observability & Availability of Infrastructure**: Deploy Checkmk to monitor hardware health, container resource exhaustion, and SNMP across the OPNsense firewall to correlate the infrastructures failures with security alerts.
+ **Adversary Emulation & C2 Detection**: Stand up an isolated AdaptixC2 team server within (`vmbr1`) to simulate post-exploitation, testing in-memory beaconing detection and kernel process execution logging (`auditd` / `sysmon`).
 
 ---
 
